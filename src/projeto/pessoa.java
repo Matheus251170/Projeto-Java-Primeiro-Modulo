@@ -8,7 +8,7 @@ public class pessoa {
 	private int telefone;
 	
 	
-	//criação do metodo
+	//criação de metodos
 	public pessoa(String nome, String email, int cod, int telefone)
 	{
 		this.cod = cod;
