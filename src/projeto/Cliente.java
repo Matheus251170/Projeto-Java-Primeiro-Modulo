@@ -9,13 +9,13 @@ public class Cliente {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Map<String, String> usuarios = new HashMap<>();
-        int opcao = 0;
+        int opcao = 0; 
 
         do {
             System.out.print("Menu:\n0-Sair\n1-Cadastro\n2-Login\n3-Atualização de Senha\n--> ");
 
             opcao = scanner.nextInt();
-
+            
             switch (opcao) {
                 case 0:
                     
@@ -25,7 +25,8 @@ public class Cliente {
                     System.out.print("Insira seu nome de usuário: ");
                     String nome = scanner.next();
 
-                    if (usuarios.containsKey(nome)) {
+                    // verifica se o map já contem essa chave (se já contem o usuario cadstrado)
+                    if (usuarios.containsKey(nome)) { 
                         System.out.println("\nEsse usuário já está cadastrado!\n");
                         break;
                     }
@@ -44,10 +45,10 @@ public class Cliente {
                     String senha2 = scanner.next();
 
                     try {
-                        if (usuarios.get(nome2).equals(senha2))
+                        // verifica se a senha(valor) do nome2(chave) é igual a senha informada pelo usuario
+                        // nome2 = chave  --  senha2 = valor
+                        if (usuarios.get(nome2).equals(senha2)) 
                             System.out.println("\nLogado com sucesso\n");
-
-							// começa a funçao
                         else
                             System.out.println("\nSenha incorreta\n");
                     } catch (NullPointerException e) {
@@ -60,6 +61,7 @@ public class Cliente {
                     System.out.print("Insira seu nome de usuário: ");
                     String nome3 = scanner.next();
 
+                    // se o usuario não existir no map esse bloco de codigo será executado
                     if (!usuarios.containsKey(nome3)) {
                         System.out.println("\nEsse usuário não está cadastrado!\n");
                         break;
@@ -68,10 +70,12 @@ public class Cliente {
                     System.out.print("Insira sua senha atual: ");
                     String senha3 = scanner.next();
 
+                    // se as senhas forem diferentes esse bloco de codigo é executado
+                    // "!" serve pra inverter o valor - se "usuarios.get(nome3).equals(senha3))" for TRUE o "!" transforma em FALSE
                     if (!usuarios.get(nome3).equals(senha3)) {
                         System.out.println("\nSenha incorreta!\n");
                         break;
-                    }
+                    } 
 
                     System.out.print("Insira sua nova senha: ");
                     String novaSenha = scanner.next();
