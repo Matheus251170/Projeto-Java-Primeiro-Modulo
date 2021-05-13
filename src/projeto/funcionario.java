@@ -1,42 +1,19 @@
 package projeto;
 
 public class funcionario extends pessoa{
-
-	private String nomeBiblioteca;
-	private int alteraCod;
 	
-	public funcionario(String nome, String email, String nomeBiblioteca, int telefone, int cod, int alteraCod)
+	
+	
+	public funcionario(String nome, String email, int telefone, int idade, int cod)
 	{
-		super(nome, email, telefone, cod);
-		
-		this.alteraCod = alteraCod;
-		this.nomeBiblioteca = nomeBiblioteca;
+		super(nome, email, telefone, idade, cod);
 	}
-
-	//criação dos metodos
 	
-	public void alteraCod()
+	public String getInfo()
 	{
+		return "\nNome do funcionário: " + super.getNome() + "\nEmail: " + super.getEmail() + "\nIdade: " 
+		+ super.getIdade() + "\nTelefone: " + super.getTelefone() + "\nCódigo do funcionário: " + super.getCod() ;
 		
 	}
 	
-	//getters and setters
-	public String getNomeBiblioteca() {
-		return nomeBiblioteca;
-	}
-
-	public void setNomeBiblioteca(String nomeBiblioteca) {
-		this.nomeBiblioteca = nomeBiblioteca;
-	}
-
-	public int getAlteraCod() {
-		return alteraCod;
-	}
-
-	public void setAlteraCod(int alteraCod) {
-		this.alteraCod = alteraCod;
-	}
-	
-	
-
 }
