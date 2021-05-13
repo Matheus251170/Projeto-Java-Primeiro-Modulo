@@ -32,14 +32,14 @@ public class pessoa {
 	}
 
 
-	/*public int getCod() {
+	public int getCod() {
 		return cod;
 	}
 
 
 	public void setCod(int cod) {
 		this.cod = cod;
-	}*/
+	}
 
 
 	public String getEmail() {
@@ -71,15 +71,6 @@ public class pessoa {
 		this.idade = idade;
 	}
 
-
-	public int getCod() {
-		return cod;
-	}
-
-
-	public void setCod(int cod) {
-		this.cod = cod;
-	}
 	
 	
 	
