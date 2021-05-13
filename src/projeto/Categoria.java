@@ -31,13 +31,14 @@ public class Categoria {
 				System.out.println("\n(2) Deseja ver livro de terror ?");
 				System.out.println("\n(3) Deseja ?");
 				System.out.println("\n(4) Deseja ?");
+				System.out.println("\n(5) Ver todas as categorias!");
 				System.out.println("\n(0) Deseja encerrar o programa?");
 				System.out.println("\nDigite sua opção: ");
 				op = leia.nextInt();
 				switch (op) {
 
 				case 1:
-
+					
 					System.out.println("\nMostrando os livros categoria drama ...");
 					System.out.println(drama);
 					break;
@@ -51,16 +52,22 @@ public class Categoria {
 				case 3:
 
 					System.out.println("\nDeseja atualizar...");
-					System.out.println(drama);
-					System.out.println(terror);
+					
 					break;
 
 				case 4:
 
 					System.out.println("\nDeseja ver todos os livros...");
-					System.out.println(drama);
-					System.out.println(terror);
+					
 					break;
+					
+				case 5:
+					
+					System.out.println("CATEGORIAS:");
+					System.out.println("\nDRAMA > "+drama);
+					System.out.println("\nTERROR > "+terror);
+					// inserir categoria comedia
+					// inserir categoria romance
 				}
 
 			} while (op != 0);
