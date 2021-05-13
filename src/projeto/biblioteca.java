@@ -18,6 +18,7 @@ public class biblioteca {
 		
 		funcionario[] func = new funcionario[3];
 		
+			
 		
 		System.out.println("Escolha uma opção: \n1. Entrar como funcionário.\n2. Entrar como cliente");
 		op = leia.nextInt();
@@ -49,8 +50,8 @@ public class biblioteca {
 						System.out.println("\n---------------------");
 						System.out.println("\n(1) Adicionar livros ao estoque");
 						System.out.println("\n(2) Remover livros do estoque");
-						System.out.println("\n(3) Atualizar livro");
-						System.out.println("\n(4) Mostrar livros disponiveis");
+						System.out.println("\n(3) Mostrar livros disponiveis");
+						System.out.println("\n(4) Visualizar informações de funcionário");
 						System.out.println("\n(0) Sair do estoque");
 						System.out.println("\n Digite sua opção: ");
 						op = leia.nextInt();
@@ -81,9 +82,26 @@ public class biblioteca {
 							System.out.println(estoque);
 							break;
 							
+						case 4: 
+							
+							if(cod == 1)
+							{
+								System.out.println(func1.getInfo());
+							}
+							else if(cod == 2)
+							{
+								System.out.println(func2.getInfo());							
+							}
+							else if(cod == 3)
+							{
+								System.out.println(func3.getInfo());
+							}
+						break;
+							
 						default:
-							System.out.println("\nSaindo do acervo");
+							System.out.println("\nSaindo do Sistema");
 						}
+						
 					}while(op!=0);//condição de saída
 					
 				break;
