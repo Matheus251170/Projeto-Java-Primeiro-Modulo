@@ -1,10 +1,10 @@
+
 package Teste;
 
 
 	import java.util.ArrayList;
 	import java.util.List;
 	import java.util.Scanner;
-
 
 
 public class Categoria {
@@ -14,10 +14,11 @@ public class Categoria {
 		public static void main(String[] args) {
 			List<String> drama = new ArrayList<String>();
 			int op;
-			drama.add("O sol é para todos ");
-			drama.add("Sociedade do cansaço");
+			drama.add("O sol Ã© para todos ");
+			drama.add("Sociedade do cansaÃ§o");
 			drama.add("Admiravel mundo novo");
-			drama.add("Em busca de nós mesmo");
+			drama.add("Em busca de nÃ³s mesmos");
+
 			
 			Scanner leia = new Scanner(System.in);
 
@@ -26,40 +27,41 @@ public class Categoria {
 			terror.add("Dracula");
 			terror.add("It - A coisa");
 			terror.add("O Exorcista");
-			terror.add("O cemitério");
+			terror.add("O cemitÃ©rio");
 			
 			List<String> comedia = new ArrayList<String>();
 			
 			comedia.add("A Troca ");
 			comedia.add("Como ser mulher");
 			comedia.add("A divina comedia");
-			comedia.add("Minha vida não tão perfeita");
+			comedia.add("Minha vida nÃ£o tÃ£o perfeita");
 			
 			List<String> romance = new ArrayList<String>();
 			
 			romance.add("O Duque e Eu ");
 			romance.add("Anne of Green Gables");
-			romance.add("A cinco passos de você");
+			romance.add("A cinco passos de vocÃª");
 			romance.add("Sol da meia-noite");
 			
+
 			List<String> ficcao = new ArrayList<String>();
 			
 			ficcao.add("I, Robot");
 			ficcao.add("Duna");
 			ficcao.add("A guerra dos mundos");
-			ficcao.add("O Senhor dos Anéis");
+			ficcao.add("O Senhor dos AnÃ©is");
 			
 			List<String> aventura = new ArrayList<String>();
 			
 			aventura.add("Alice no pais das maravilhas");
 			aventura.add("A volta ao mundo em 80 dias");
 			aventura.add("A Rainha Vermelha");
-			aventura.add("O Código Da Vinci");
+			aventura.add("O CÃ³digo Da Vinci");
 			
 			List<String> acao = new ArrayList<String>();
 			
 			acao.add("Cidade dos Ossos");
-			acao.add("As Minas de Salomão");
+			acao.add("As Minas de SalomÃ£o");
 			acao.add("Jogos Vorazes");
 			acao.add("Anjos e Demonios");
 			
@@ -69,22 +71,22 @@ public class Categoria {
 			best.add("Fahrenheit 451");
 			best.add("Mindset: A nova psicologia do sucesso");
 			best.add("O cavaleiro preso na armadura");
-			best.add("Arsène Lupin: O Ladrão de Casaca");
+			best.add("ArsÃ¨ne Lupin: O LadrÃ£o de Casaca");
 			
 			
 			do {
-				System.out.println("\n------------MENU DE OPÇÕES-------------------");
+				System.out.println("\n------------MENU DE OPÃ‡Ã•ES-------------------");
 				System.out.println("\n(1) Deseja ver livro de terror?");
 				System.out.println("\n(2) Deseja ver livro de drama?");
 				System.out.println("\n(3) Deseja ver livros de comedia?");
 				System.out.println("\n(4) Deseja ver livros de romance?");
-				System.out.println("\n(5) Deseja ver livros de ficção?");
+				System.out.println("\n(5) Deseja ver livros de ficÃ§Ã£o?");
 				System.out.println("\n(6) Deseja ver livros de aventura?");
-				System.out.println("\n(7) Deseja ver livros de ação?");
+				System.out.println("\n(7) Deseja ver livros de aÃ§Ã£o?");
 				System.out.println("\n(8) Deseja ver os Best Sellers?");
 				System.out.println("\n(9) Ver todas as categorias!");
 				System.out.println("\n(0) Deseja encerrar o programa?");
-				System.out.println("\nDigite sua opção: ");
+				System.out.println("\nDigite sua opÃ§Ã£o: ");
 				op = leia.nextInt();
 				switch (op) {
 
@@ -102,9 +104,8 @@ public class Categoria {
 
 				case 3:
 
-					System.out.println("\nMostrando os livros de comédia...");
+					System.out.println("\nMostrando os livros de comÃ©dia...");
 					System.out.println(comedia);
-					
 					break;
 
 				case 4:
@@ -115,7 +116,7 @@ public class Categoria {
 					
 				case 5:
 
-					System.out.println("\nMostrando os livros de ficção...");
+					System.out.println("\nMostrando os livros de ficÃ§Ã£o...");
 					System.out.println(ficcao);
 					break;
 					
@@ -128,7 +129,7 @@ public class Categoria {
 					
 				case 7:
 
-					System.out.println("\nMostrando os livros de ação...");
+					System.out.println("\nMostrando os livros de aÃ§Ã£o...");
 					System.out.println(acao);
 					break;
 					
@@ -143,7 +144,7 @@ public class Categoria {
 					System.out.println("CATEGORIAS:");
 					System.out.println("\nDRAMA > "+drama);
 					System.out.println("\nTERROR > "+terror);
-					System.out.println("\nCOMÉDIA > "+comedia);
+					System.out.println("\nCOMÃ‰DIA > "+comedia);
 					System.out.println("\nROMANCE > "+romance);
 					System.out.println("\nFICCAO > "+ficcao);
 					System.out.println("\nAVENTURA > "+aventura);
@@ -158,5 +159,3 @@ public class Categoria {
 		}
 
 	}
-
-
