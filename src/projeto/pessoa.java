@@ -3,22 +3,25 @@ package projeto;
 public class pessoa {
 	
 	private String nome;
-	private int cod;
 	private String email;
 	private int telefone;
+	private int idade;
+	private int cod;
 	
 	
 	//criação de metodos
-	public pessoa(String nome, String email, int cod, int telefone)
+	public pessoa(String nome, String email, int telefone, int idade, int cod)
 	{
-		this.cod = cod;
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
+		this.idade = idade;
+		this.cod = cod;
 	}
 
 	
 	//getters and setters
+	
 	public String getNome() {
 		return nome;
 	}
@@ -27,17 +30,6 @@ public class pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-
-	public int getCod() {
-		return cod;
-	}
-
-
-	public void setCod(int cod) {
-		this.cod = cod;
-	}
-
 
 	public String getEmail() {
 		return email;
@@ -57,9 +49,25 @@ public class pessoa {
 	public void setTelefone(int telefone) {
 		this.telefone = telefone;
 	}
+
+
+	public int getIdade() {
+		return idade;
+	}
+
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
 	
-	
-	
+	public int getCod() {
+		return cod;
+	}
+
+
+	public void setCod(int cod) {
+		this.cod = cod;
+	}
 	
 
 }
