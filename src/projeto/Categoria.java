@@ -24,13 +24,26 @@ public class Categoria {
 			terror.add("O Exorcista");
 			terror.add("O cemitério");
 			
+			List<String> comedia = new ArrayList<String>();
+			
+			comedia.add("A Troca ");
+			comedia.add("Como ser mulher");
+			comedia.add("A divina comedia");
+			comedia.add("Minha vida não tão perfeita");
+			
+			List<String> romance = new ArrayList<String>();
+			
+			romance.add("O Duque e Eu ");
+			romance.add("Anne of Green Gables");
+			romance.add("A cinco passos de você");
+			romance.add("Sol da meia-noite");
 			
 			do {
 				System.out.println("\n------------MENU DE OPÇÕES-------------------");
-				System.out.println("\n(1) Deseja ver livro de comedia ?");
-				System.out.println("\n(2) Deseja ver livro de terror ?");
-				System.out.println("\n(3) Deseja ?");
-				System.out.println("\n(4) Deseja ?");
+				System.out.println("\n(1) Deseja ver livro de terror ?");
+				System.out.println("\n(2) Deseja ver livro de drama ?");
+				System.out.println("\n(3) Deseja ver livros de comedia?");
+				System.out.println("\n(4) Deseja ver livros de romance ?");
 				System.out.println("\n(5) Ver todas as categorias!");
 				System.out.println("\n(0) Deseja encerrar o programa?");
 				System.out.println("\nDigite sua opção: ");
@@ -51,13 +64,17 @@ public class Categoria {
 
 				case 3:
 
-					System.out.println("\nDeseja atualizar...");
+					System.out.println("\nMostrando livros de comedia...");
+					System.out.println(comedia);
+					
 					
 					break;
 
 				case 4:
 
-					System.out.println("\nDeseja ver todos os livros...");
+					System.out.println("\nMostrando livros de romance ...");
+					System.out.println(romance);
+					
 					
 					break;
 					
@@ -66,8 +83,8 @@ public class Categoria {
 					System.out.println("CATEGORIAS:");
 					System.out.println("\nDRAMA > "+drama);
 					System.out.println("\nTERROR > "+terror);
-					// inserir categoria comedia
-					// inserir categoria romance
+					System.out.println("\nCOMÉDIA > "+comedia);
+					System.out.println("\nROMANCE> "+romance);
 				}
 
 			} while (op != 0);
