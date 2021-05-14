@@ -6,15 +6,17 @@ public class pessoa {
 	private String email;
 	private int telefone;
 	private int idade;
+	private int cod;
 	
 	
 	//criação de metodos
-	public pessoa(String nome, String email, int telefone, int idade)
+	public pessoa(String nome, String email, int telefone, int idade, int cod)
 	{
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.idade = idade;
+		this.cod = cod;
 	}
 
 	
@@ -56,7 +58,16 @@ public class pessoa {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
-	}	
+	}
+	
+	public int getCod() {
+		return cod;
+	}
+
+
+	public void setCod(int cod) {
+		this.cod = cod;
+	}
 	
 
 }
