@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 
 public class biblioteca {
@@ -15,6 +16,7 @@ public class biblioteca {
 		Scanner leia = new Scanner(System.in);
 		ArrayList<String> estoque = new ArrayList();
 		Map<String, String> usuarios = new HashMap<>();
+		List<String> drama = new ArrayList<String>();
 		
 	
 		
@@ -24,11 +26,39 @@ public class biblioteca {
 		
 		funcionario[] func = new funcionario[3];
 		
+		drama.add("O sol é para todos");
+		drama.add("Sociedade do cansaço");
+		drama.add("Admiravel mundo novo");
+		drama.add("Em busca de nos mesmo");
+		
+		List<String> terror = new ArrayList<String>();
+		
+		terror.add("Dracula");
+		terror.add("It - A coisa");
+		terror.add("O Exorcista");
+		terror.add("O cemitério");
+		
+
+		List<String> comedia = new ArrayList<String>();
+	
+		comedia.add("A Troca");
+		comedia.add("Como ser mulher");
+		comedia.add("A divina comedia");
+		comedia.add("Minha vida não tão perfeita");
+		
+		List<String> romance = new ArrayList<String>();
+		
+		romance.add("O Duque e Eu");
+		romance.add("Anne of Green Gables");
+		romance.add("A cinco passos de você");
+		romance.add("Sol da meia-noite");
+		
 			
 		
 			System.out.println("Escolha uma opção: \n1. Entrar como funcionário.\n2. Entrar como cliente");
 			op = leia.nextInt();
 			
+
 			switch(op)
 			{
 				case 1:
@@ -77,6 +107,22 @@ public class biblioteca {
 								if(estoque.contains(produto1)) {
 									estoque.remove(produto1);
 								}
+								else if(comedia.contains(produto1))
+								{
+									comedia.remove(produto1);
+								}
+								else if(terror.contains(produto1))
+								{
+									terror.remove(produto1);
+								}
+								else if(drama.contains(produto1))
+								{
+									drama.remove(produto1);
+								}
+								else if(romance.contains(produto1))
+								{
+									romance.remove(produto1);
+								}
 								else {
 									System.err.println("\nLivro não existe no estoque.");
 								}
@@ -86,6 +132,10 @@ public class biblioteca {
 								leia.nextLine();//lê uma String para esvaziar o buffer de memória (para não ficar sujeira na memória
 								System.out.println("\nMostrando os produtos do estoque:");
 								System.out.println(estoque);
+								System.out.println(drama);
+								System.out.println(terror);
+								System.out.println(comedia);
+								System.out.println(romance);
 								break;
 								
 							case 4: 
@@ -153,9 +203,58 @@ public class biblioteca {
 	
 				                    try {
 				                        if (usuarios.get(nome2).equals(senha2))
-				                            System.out.println("\nLogado com sucesso\n");
-	
-											// começa a funçao
+				                        {    System.out.println("\nLogado com sucesso\n");
+				                        
+				                        do {
+				            				System.out.println("\n-------------------------------");
+				            				System.out.println("\n(1) Deseja ver livros de terror ?");
+				            				System.out.println("\n(2) Deseja ver livros de drama ?");
+				            				System.out.println("\n(3) Deseja ver livros de comedia ?");
+				            				System.out.println("\n(4) Deseja ver livros de romance ?");
+				            				System.out.println("\n(5) Ver todas as categorias!");
+				            				System.out.println("\n(0) Deseja encerrar o programa?");
+				            				System.out.println("\nDigite sua opção: ");
+				            				op = leia.nextInt();
+				            				
+				            				switch (op) {
+
+				            				case 1:
+
+				            					System.out.println("\nMostrando os livros categoria drama ...");
+				            					System.out.println(drama);
+				            					break;
+
+				            				case 2:
+
+				            					System.out.println("\nMostrando os livros categoria terror ...");
+				            					System.out.println(terror);
+				            					break;
+
+				            				case 3:
+
+				            					System.out.println("\nMostrando livros de comedia...");
+				            					System.out.println(comedia);
+				            					break;
+
+				            				case 4:
+
+				            					System.out.println("\nMostrando livros de romance ...");
+				            					System.out.println(romance);
+				            					break;
+				            					
+				            				case 5:
+
+				            					System.out.println("CATEGORIAS:");
+				            					System.out.println("\nDRAMA > "+drama);
+				            					System.out.println("\nTERROR > "+terror);
+				            					System.out.println("\nCOMÉDIA > "+comedia);
+				            					System.out.println("\nROMANCE> "+romance);
+				            				}
+
+				            			} while (op != 0);
+				                        
+				                        }
+				                        // começa a funçao
 				                        else
 				                            System.out.println("\nSenha incorreta\n");
 				                    } catch (NullPointerException e) {
@@ -193,6 +292,8 @@ public class biblioteca {
 				            }
 	
 				        } while (op != 0);
+					 
+			
 	
 				        System.out.println("Fim do Programa");
 					
